@@ -1,10 +1,21 @@
-hash: 2d87ad14a79851a1ce0606268dce0870b17e06b74e048f37993d28be7a576f65
-updated: 2017-02-23T11:32:38.398922679-06:00
+hash: 8501a6ac583eef786f524689b392ea728315673b81f4787161bdcd2fe73aabb1
+updated: 2017-03-06T14:31:25.570489439-06:00
 imports:
 - name: github.com/cenkalti/backoff
   version: b02f2bbce11d7ea6b97f282ef1771b0fe2f65ef3
 - name: github.com/compose/mejson
   version: afcf51c7c640b1e09c17065d4e5b8de3259d6261
+- name: github.com/dlclark/regexp2
+  version: 3f97b6a39134e6bd88a72d1388d1632e60d83ef6
+  subpackages:
+  - syntax
+- name: github.com/dop251/goja
+  version: 1b1607cf5cf9c00ae9c2b0da9ac4f48cb25f8703
+  subpackages:
+  - ast
+  - file
+  - parser
+  - token
 - name: github.com/golang/protobuf
   version: 4bd1920723d7b7c925de087aa32e2187708897f7
   subpackages:
@@ -22,7 +33,7 @@ imports:
 - name: github.com/nu7hatch/gouuid
   version: 179d4d0c4d8d407a32af483c2354df1d2c91e6c3
 - name: github.com/oklog/oklog
-  version: 6494692aa2958adeb2e12c5d9d9c1646acd332ea
+  version: f4b80d08ceca8e16456441aa3d68531ba40afa53
   subpackages:
   - pkg/group
 - name: github.com/robertkrimen/otto
@@ -36,7 +47,7 @@ imports:
   - token
   - underscore
 - name: github.com/Sirupsen/logrus
-  version: c078b1e43f58d563c74cebe63c85789e76ddb627
+  version: 0208149b40d863d2c1a2f8fe5753096a9cf2cc8b
 - name: github.com/smartystreets/go-aws-auth
   version: 2043e6d0bb7e4c18464a7bba562acbe482e3cabd
 - name: golang.org/x/crypto
@@ -52,6 +63,17 @@ imports:
   version: d75a52659825e75fff6158388dddc6a5b04f9ba5
   subpackages:
   - unix
+- name: golang.org/x/text
+  version: f28f36722d5ef2f9655ad3de1f248e3e52ad5ebd
+  subpackages:
+  - cases
+  - collate
+  - internal
+  - internal/colltab
+  - internal/tag
+  - language
+  - transform
+  - unicode/norm
 - name: gopkg.in/fatih/pool.v2
   version: 20a0a429c5f93de45c90f5f09ea297c25e0929b3
 - name: gopkg.in/gorethink/gorethink.v3
@@ -68,11 +90,11 @@ imports:
   - internal/sasl
   - internal/scram
 - name: gopkg.in/olivere/elastic.v2
-  version: 4133648a0323dccefeb03f127e920cc15c595308
+  version: 89b2f0f27bbe09ff5ee27cb6f4422cb2d89c6be8
 - name: gopkg.in/olivere/elastic.v3
-  version: 4133648a0323dccefeb03f127e920cc15c595308
+  version: 89b2f0f27bbe09ff5ee27cb6f4422cb2d89c6be8
 - name: gopkg.in/olivere/elastic.v5
-  version: 4133648a0323dccefeb03f127e920cc15c595308
+  version: 89b2f0f27bbe09ff5ee27cb6f4422cb2d89c6be8
   subpackages:
   - uritemplates
 - name: gopkg.in/sourcemap.v1
