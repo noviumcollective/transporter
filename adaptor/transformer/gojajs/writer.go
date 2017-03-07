@@ -17,12 +17,12 @@ var (
 	_ client.Writer = &Writer{}
 )
 
-type Writer struct {
-}
+// Writer implements the client.Writer interface.
+type Writer struct{}
 
 func (w *Writer) Write(msg message.Msg) func(client.Session) error {
 	return func(s client.Session) error {
-		// short circuit for deletes and commands
+		// short circuit for commands
 		if msg.OP() == ops.Command {
 			return nil
 		}

@@ -15,8 +15,10 @@ var (
 	ErrEmptyFilename = errors.New("no filename specified")
 )
 
+// JSFunc defines the structure a transformer function.
 type JSFunc func(map[string]interface{}) *goja.Object
 
+// Client represents a client to the underlying transformer function.
 type Client struct {
 	fn  string
 	vm  *goja.Runtime

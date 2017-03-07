@@ -63,7 +63,7 @@ var (
 			false,
 		},
 		{
-			"we should be able to skip a nil message",
+			"we should be able to skip a message",
 			"function f(doc) { doc['op'] = 's'; return doc }",
 			message.From(ops.Insert, "collection", data.Data{"id": bsonID1, "name": "nick"}),
 			nil,
