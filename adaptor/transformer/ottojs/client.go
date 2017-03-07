@@ -1,4 +1,4 @@
-package transformer
+package ottojs
 
 import (
 	"errors"
@@ -6,6 +6,7 @@ import (
 
 	"github.com/compose/transporter/client"
 	"github.com/robertkrimen/otto"
+	_ "github.com/robertkrimen/otto/underscore" // enable underscore
 )
 
 var (

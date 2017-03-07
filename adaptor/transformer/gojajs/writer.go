@@ -20,15 +20,14 @@ var (
 // Writer implements the client.Writer interface.
 type Writer struct{}
 
-func (w *Writer) Write(msg message.Msg) func(client.Session) error {
-	return func(s client.Session) error {
+func (w *Writer) Write(msg message.Msg) func(client.Session) (message.Msg, error) {
+	return func(s client.Session) (message.Msg, error) {
 		// short circuit for commands
 		if msg.OP() == ops.Command {
-			return nil
+			return msg, nil
 		}
 
-		_, err := w.transformOne(s.(*Session), msg)
-		return err
+		return w.transformOne(s.(*Session), msg)
 	}
 }
 
